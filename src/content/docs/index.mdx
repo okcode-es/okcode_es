@@ -1,64 +1,111 @@
 ---
-title: 专业开发服务 | WordPress, Shopify, 网站, APP, 游戏开发
-description: 提供专业的WordPress、Shopify、网站、APP、游戏、小程序开发服务。分享摄影作品、旅游经历、西班牙相关指南和实用技巧。
+title: OKCODE | 实践开发教程与技术服务
+description: OKCODE | 只写OK的代码 提供专业的网站与小程序开发、电商解决方案与移动应用构建服务。
 template: splash
 hero:
-  tagline: 专业开发您的数字梦想
-  image:
-    file: ../../assets/houston.webp
+  title: 
+   	实践性开发教程与专业技术服务
+  tagline: 
+    敲起键盘写OK的代码
+  #image:
+    #file: ../../assets/portfolio.webp
   actions:
-    - text: 查看开发指南
-      link: /guides/example/
+    - text: 查看全部文档
+      link: guides/example/
       icon: right-arrow
-    - text: 联系我们
-      link: /reference/example/
+      variant: primary
+    - text: 咨询开发业务
+      link: reference/example/
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 import { ShowcaseText } from 'starlight-showcases';
 
-## 我们的服务
-<CardGrid stagger>
-	<Card title="网站开发" icon="pencil">
-		定制网站开发，包括响应式设计、SEO优化和性能提升。
-	</Card>
-	<Card title="WordPress开发" icon="document">
-		WordPress主题定制、插件开发、网站维护和优化。
-	</Card>
-	<Card title="Shopify开发" icon="add-document">
-		Shopify商店搭建、主题定制、应用集成和电商优化。
-	</Card>
-	<Card title="APP开发" icon="setting">
-		移动应用开发，包括iOS和Android原生应用。
-	</Card>
-	<Card title="游戏开发" icon="open-book">
-		游戏设计和开发，从概念到发布的全程服务。
-	</Card>
-	<Card title="小程序开发" icon="rocket">
-		微信小程序、支付宝小程序等平台的小程序开发。
-	</Card>
-</CardGrid>
+---
 
-## 个人分享
+## 🚀 专业技术服务
 
 <CardGrid stagger>
-	<Card title="摄影作品" icon="camera">
-		分享我的摄影作品和技巧，捕捉美好瞬间。
-	</Card>
-	<Card title="旅游指南" icon="map">
-		探索世界各地的旅游经验和实用指南。
-	</Card>
-	<Card title="西班牙相关" icon="flag">
-		关于西班牙的文化、生活和旅行建议。
-	</Card>
+  <Card title="定制网站开发" icon="laptop">
+    提供响应式设计与 **SEO 性能优化**。擅长使用 Astro, React 等现代框架构建极速加载的品牌官网。
+  </Card>
+  <Card title="电商解决方案" icon="shopping-cart">
+    **Shopify 专家** 与 **WordPress 定制**。涵盖插件开发、主题美化及跨境支付集成，提升转化率。
+  </Card>
+  <Card title="移动 APP 开发" icon="setting">
+    利用 **Flutter** 构建原生级性能的 iOS 和 Android 应用，实现一套代码多端运行，节省开发成本。
+  </Card>
+  <Card title="游戏与小程序" icon="rocket">
+    提供 **Unity 游戏开发** 及微信、支付宝多平台 **小程序定制**，打造沉浸式交互体验。
+  </Card>
 </CardGrid>
 
+---
+
+## 📚 技术教程
+
+<LinkCard 
+  title="开发指南" 
+  description="从零开始学习现代 Web 开发、APP 构建和游戏制作。涵盖 WordPress 定制、Shopify 集成、Flutter 开发等实用教程。" 
+  href="/zh-cn/guides/example/" 
+/>
+
+---
+
+## 🆕 最新教程
+
+<CardGrid stagger>
+  <LinkCard 
+    title="WordPress 高级定制技巧" 
+    description="2025 年最新 WordPress 开发实践：自定义字段、性能优化和安全加固。" 
+    href="/zh-cn/guides/wordpress-advanced/" 
+  />
+  <LinkCard 
+    title="Flutter 跨平台 APP 开发入门" 
+    description="使用 Flutter 构建高性能移动应用，从基础到发布的全程指南。" 
+    href="/zh-cn/guides/flutter-intro/" 
+  />
+  <LinkCard 
+    title="Shopify 主题开发最佳实践" 
+    description="掌握 Shopify Liquid 模板语言，创建自定义电商主题。" 
+    href="/zh-cn/guides/shopify-themes/" 
+  />
+</CardGrid>
+
+---
+
+## 🌍 生活指南
+
+<CardGrid>
+  <LinkCard 
+    title="西班牙生活指南" 
+    description="深耕西班牙签证、移民、教育及当地生活实操建议，为海外华人提供价值参考。" 
+    href="/zh-cn/spain/" 
+  />
+  <LinkCard 
+    title="摄影与旅行" 
+    description="记录地中海的光影瞬间，分享世界各地的旅游攻略与摄影技巧。" 
+    href="/zh-cn/photography/" 
+  />
+</CardGrid>
+
+---
+
+## 📸 摄影作品集
+
+<LinkCard 
+  title="我的摄影作品" 
+  description="探索我的镜头下的世界：从西班牙的阳光海岸到欧洲的古老街道，每一张照片都讲述着一个故事。" 
+  href="/zh-cn/photography/" 
+/>
+
+---
 <ShowcaseText
   entries={[
     {
-      href: 'https://starlight-showcases.vercel.app/getting-started/',
+      href: 'https://github.com/HiDeoo/starlight-links-validator',
       title: 'starlight-showcases',
       description: 'Check for broken links in your Starlight pages.',
     },
