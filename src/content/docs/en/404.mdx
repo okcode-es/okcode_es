@@ -1,0 +1,45 @@
+---
+title: Page Not Found
+description: Sorry, the page you're looking for doesn't exist. Let's get you back to exploring!
+template: splash
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<div class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+  <div class="mb-8">
+    <div class="text-8xl md:text-9xl font-black bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
+      404
+    </div>
+  </div>
+
+  <div class="max-w-md mb-8">
+    <h1 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+      Page Not Found
+    </h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300">
+      Looks like you've ventured into the digital void...<br />
+      Don't worry, let's get you back to safety.
+    </p>
+  </div>
+
+  <div class="flex flex-col sm:flex-row gap-4 mb-8">
+    <LinkCard
+      title="Go Home"
+      href="/"
+      className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+    />
+
+    <LinkCard
+      title="Browse Guides"
+      href="/guides/"
+      className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+    />
+  </div>
+
+  <div class="text-sm text-gray-500 dark:text-gray-400">
+    <div class="font-mono bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded inline-block">
+      console.log("404: Page not found");
+    </div>
+  </div>
+</div>

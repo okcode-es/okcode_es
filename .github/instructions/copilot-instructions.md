@@ -34,6 +34,7 @@ This is a multilingual technical documentation site built with Astro 5.0 and Sta
 
 ## Example Patterns
 - **Adding New Guide**: Create `src/content/docs/en/guides/new-feature.md` with frontmatter, then translate to `es/` and root
-- **Custom Styling**: Add Tailwind classes or modify `@theme` variables in `global.css`
-- **Navigation**: Update sidebar config in `astro.config.mjs` for new sections</content>
+- **Custom Styling**: Use Tailwind CSS classes (e.g., `bg-blue-500 text-white p-4 rounded-lg`) instead of custom CSS
+- **Navigation**: Update sidebar config in `astro.config.mjs` for new sections
+- **Component Styling**: Apply Tailwind classes directly to Starlight components for consistent theming</content>
 <parameter name="filePath">c:\Users\Lwh77\Desktop\workspace\okcode\.github\copilot-instructions.md

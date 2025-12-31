@@ -49,6 +49,7 @@ export default defineConfig({
               es: { label: 'Español', lang: 'es' },
           },
           title: 'okcode',
+          routeMiddleware: './src/routeData.ts',
           social: [
               { icon: 'github', label: 'GitHub', href: 'https://github.com/okcode-es' },
               { icon: 'twitter', label: 'Twitter', href: 'https://twitter.com/okcode_' }
@@ -63,13 +64,21 @@ export default defineConfig({
                   autogenerate: { directory: 'guides' },
               },
               {
-                  label: 'Reference',
+                  label: '开发服务',
+				    translations: {
+					'en': 'Development Services',
+					'es': 'Servicios de Desarrollo'
+				},
                   autogenerate: { directory: 'reference' },
               },
           ],
           customCss: [
               './src/styles/global.css',
           ],
+          components: {
+            Hero: './src/components/CustomHero.astro',
+            Footer: './src/components/CustomFooter.astro',
+          },
           plugins: [
               starlightDocSearch({
                   appId: 'RGT6K369RP',

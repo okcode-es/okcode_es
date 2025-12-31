@@ -1,40 +1,115 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: OKCODE | Practical Development Tutorials and Technical Services
+description: OKCODE | Technical blog recording development process, life and providing professional website and mini-program development, e-commerce solutions and mobile application building services.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  title: 
+   	Record Development Process
+  tagline: 
+    ''
   image:
-    file: ../../../assets/portfolio.webp
+    alt: OKCODE Hero Image
+    file: ../../../assets/hero.svg 
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: 📂 My Projects
+      link: '#-under-development'
+      variant: secondary
+    - text: 🆕 Latest Articles
+      link: '#-latest-tutorials'
+      variant: secondary
+    - text: 📍Spain Life Guide
+      link: '#-life-guides'
+      variant: secondary
+    - text: More Tutorials
+      link: /en/guides/example/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+      variant: primary
+    - text: Consult Development Business
+      link: /en/reference/services
       icon: external
-      variant: minimal
+      variant: secondary
+
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { ShowcaseText, ShowcaseImage } from 'starlight-showcases';
+import { Badge } from '@astrojs/starlight/components';
 
-## Next steps
 
+---
+
+## 🚀 Under Development...
+<CardGrid>
+  <ShowcaseImage
+    entries={[
+      {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'flappy bird',
+      },
+        {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'working on it',
+      },
+    ]}
+  />
+</CardGrid>
+
+---
+## 🆕 Latest Tutorials
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <LinkCard 
+    title="WordPress Advanced Customization Techniques" 
+    description="2025 latest WordPress development practices: custom fields, performance optimization and security hardening." 
+    href="/en/guides/wordpress-advanced/" 
+  />
+  <LinkCard 
+    title="Flutter Cross-platform APP Development Introduction" 
+    description="Build high-performance mobile applications using Flutter, from basics to publishing." 
+    href="/en/guides/flutter-intro/" 
+  />
+  <LinkCard 
+    title="Shopify Theme Development Best Practices" 
+    description="Master Shopify Liquid template language and create custom e-commerce themes." 
+    href="/en/guides/shopify-themes/" 
+  />
+</CardGrid>
+
+---
+
+## 🌍 Life Guides
+
+<CardGrid>
+  <LinkCard 
+    title="Spain Life Guide" 
+    description="Deeply rooted in Spain visa, immigration, education and practical local life suggestions, providing valuable references for overseas Chinese." 
+    href="/en/spain/" 
+  />
+  <LinkCard 
+    title="Photography and Travel" 
+    description="Record the light and shadow of the Mediterranean, share travel guides and photography skills from around the world." 
+    href="/en/photography/" 
+  />
+</CardGrid>
+
+---
+
+## 📸 Photography Portfolio
+
+<CardGrid>
+  <ShowcaseImage
+    entries={[
+      {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'flappy bird',
+      },
+        {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'working on it',
+      },
+    ]}
+  />
 </CardGrid>

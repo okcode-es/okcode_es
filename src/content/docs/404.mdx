@@ -1,0 +1,43 @@
+---
+title: 404 Not Found
+description: 抱歉，您访问的页面不存在。让我们回到主页继续探索吧！
+template: splash
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<div class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+  <div class="mb-8">
+    <div class="text-8xl md:text-9xl font-black bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-pulse">
+      404
+    </div>
+  </div>
+
+  <div class="max-w-md mb-8">
+    <h1 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+    </h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300">
+      看起来您迷失在数字宇宙中了...<br />
+      别担心，让我们带您回到安全的港湾。
+    </p>
+  </div>
+
+    <CardGrid>
+        <LinkCard
+        title="回到主页"
+        href="/"
+        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+        />
+
+        <LinkCard
+        title="浏览指南"
+        href="/guides/example/"
+        className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+        />
+    </CardGrid>
+  <div class="text-sm text-gray-500 dark:text-gray-400">
+    <div class="font-mono bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded inline-block">
+      console.log("404: Page not found");
+    </div>
+  </div>
+</div>

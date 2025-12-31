@@ -1,6 +1,6 @@
 ---
 description: 'Manages multilingual documentation content, structure, and configuration for the OKCODE Astro/Starlight site. Use for adding guides, updating navigation, managing translations, and modifying site configuration.'
-tools: [file_search, read_file, list_dir, create_file, replace_string_in_file, run_in_terminal]
+tools: []
 ---
 
 ## Purpose
@@ -16,6 +16,7 @@ This agent specializes in the OKCODE documentation site architecture and workflo
 - **Modify site-wide settings** (colors, analytics, search, plugins)
 - **Troubleshoot build issues** or preview the live site
 - **Translate existing content** between language versions
+- **Apply Tailwind CSS styling** to components and layouts
 
 ## Ideal Inputs
 ```
@@ -34,15 +35,24 @@ This agent specializes in the OKCODE documentation site architecture and workflo
 ## Key Constraints
 - **Do not** modify component internals or deep Astro internals beyond config
 - **Do not** change package.json dependencies without explicit approval
+- **Do not** write custom CSS rules - always use Tailwind CSS utility classes
 - **Always** mirror content structure: if adding `en/guides/example.md`, also add `es/guides/example.md` and `guides/example.md` (Chinese root)
 - **Always** validate Starlight frontmatter schema (title, description required; template optional)
 - **Always** use kebab-case for new filenames
+- **Always** style with Tailwind classes (e.g., `bg-blue-500 text-white p-4 rounded-lg`) instead of custom CSS
 
 ## Content Structure Rules
 - **Root folder** (`src/content/docs/`) = Chinese (zh-CN) content
 - **English**: `src/content/docs/en/guides/` and `src/content/docs/en/reference/`
 - **Spanish**: `src/content/docs/es/guides/` and `src/content/docs/es/reference/`
 - **UI Strings**: Language-specific translations in `src/content/i18n/{en,es,zh-CN}.json`
+
+## Styling Guidelines
+- **Tailwind CSS Only**: Never write custom CSS - use utility classes exclusively
+- **Common Classes**: `bg-{color}-{shade}`, `text-{color}-{shade}`, `p-{size}`, `m-{size}`, `rounded-{size}`
+- **Layout**: `flex`, `grid`, `block`, `inline-block`, `hidden`
+- **Responsive**: `md:`, `lg:`, `xl:` prefixes for responsive design
+- **Component Styling**: Apply classes directly to Starlight components (Card, CardGrid, etc.)
 
 
 ## Report Progress

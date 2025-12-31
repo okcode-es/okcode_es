@@ -1,61 +1,63 @@
 ---
 title: OKCODE | 实践开发教程与技术服务
-description: OKCODE | 只写OK的代码 提供专业的网站与小程序开发、电商解决方案与移动应用构建服务。
+description: OKCODE | 技术博客记录开发过程, 生活和提供专业的网站与小程序开发、电商解决方案与移动应用构建服务。
 template: splash
 hero:
   title: 
-   	实践性开发教程与专业技术服务
+   	记录开发过程
   tagline: 
-    敲起键盘写OK的代码
-  #image:
-    #file: ../../assets/portfolio.webp
+    ''
+  image:
+    alt: OKCODE Hero Image
+    file: ../../assets/hero.svg 
   actions:
-    - text: 查看全部文档
+    - text: 📂 我的项目
+      link: '#-正在开发中'
+      variant: secondary
+    - text: 🆕 最新文章
+      link: '#-最新教程'
+      variant: secondary
+    - text: 📍西班牙生活指南
+      link: '#-生活指南'
+      variant: secondary
+    - text: 更多教程
       link: guides/example/
       icon: right-arrow
       variant: primary
     - text: 咨询开发业务
-      link: reference/example/
+      link: reference/services
       icon: external
-      variant: minimal
+      variant: secondary
+
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
-import { ShowcaseText } from 'starlight-showcases';
+import { ShowcaseText, ShowcaseImage } from 'starlight-showcases';
+import { Badge } from '@astrojs/starlight/components';
+
 
 ---
 
-## 🚀 专业技术服务
-
-<CardGrid stagger>
-  <Card title="定制网站开发" icon="laptop">
-    提供响应式设计与 **SEO 性能优化**。擅长使用 Astro, React 等现代框架构建极速加载的品牌官网。
-  </Card>
-  <Card title="电商解决方案" icon="shopping-cart">
-    **Shopify 专家** 与 **WordPress 定制**。涵盖插件开发、主题美化及跨境支付集成，提升转化率。
-  </Card>
-  <Card title="移动 APP 开发" icon="setting">
-    利用 **Flutter** 构建原生级性能的 iOS 和 Android 应用，实现一套代码多端运行，节省开发成本。
-  </Card>
-  <Card title="游戏与小程序" icon="rocket">
-    提供 **Unity 游戏开发** 及微信、支付宝多平台 **小程序定制**，打造沉浸式交互体验。
-  </Card>
+## 🚀 正在开发中...
+<CardGrid>
+  <ShowcaseImage
+    entries={[
+      {
+        thumbnail: import('../../assets/portfolio.svg'),
+        href: '/',
+        title: 'flappy bird',
+      },
+        {
+        thumbnail: import('../../assets/portfolio.svg'),
+        href: '/',
+        title: 'working on it',
+      },
+    ]}
+  />
 </CardGrid>
 
 ---
-
-## 📚 技术教程
-
-<LinkCard 
-  title="开发指南" 
-  description="从零开始学习现代 Web 开发、APP 构建和游戏制作。涵盖 WordPress 定制、Shopify 集成、Flutter 开发等实用教程。" 
-  href="/zh-cn/guides/example/" 
-/>
-
----
-
 ## 🆕 最新教程
-
 <CardGrid stagger>
   <LinkCard 
     title="WordPress 高级定制技巧" 
@@ -95,19 +97,20 @@ import { ShowcaseText } from 'starlight-showcases';
 
 ## 📸 摄影作品集
 
-<LinkCard 
-  title="我的摄影作品" 
-  description="探索我的镜头下的世界：从西班牙的阳光海岸到欧洲的古老街道，每一张照片都讲述着一个故事。" 
-  href="/zh-cn/photography/" 
-/>
-
+<CardGrid>
+  <ShowcaseImage
+    entries={[
+      {
+        thumbnail: import('../../assets/portfolio.svg'),
+        href: '/',
+        title: 'flappy bird',
+      },
+        {
+        thumbnail: import('../../assets/portfolio.svg'),
+        href: '/',
+        title: 'working on it',
+      },
+    ]}
+  />
+</CardGrid>
 ---
-<ShowcaseText
-  entries={[
-    {
-      href: 'https://github.com/HiDeoo/starlight-links-validator',
-      title: 'starlight-showcases',
-      description: 'Check for broken links in your Starlight pages.',
-    },
-  ]}
-/>

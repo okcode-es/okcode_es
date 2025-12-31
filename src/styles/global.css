@@ -4,6 +4,12 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+[data-template="splash"] .hero {
+  background-image: url('/src/assets/your-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
 @theme {
 /* Generated accent color palettes. */
 --color-accent-200: #92d1fe;

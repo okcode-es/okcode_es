@@ -78,9 +78,10 @@ npm run preview
 ```
 
 ### Styling and Theming
-- **Custom colors**: Modify `@theme` variables in `src/styles/global.css`
-- **Component styling**: Use Tailwind classes with Starlight components
-- **Theme consistency**: Maintain design system across all pages
+- **Tailwind CSS**: Use utility classes for all styling (e.g., `bg-blue-500`, `text-white`, `p-4`, `rounded-lg`)
+- **Component styling**: Apply Tailwind classes directly to Starlight components
+- **Theme consistency**: Use consistent Tailwind color palette and spacing across all pages
+- **Custom components**: Style with Tailwind classes, avoid writing custom CSS rules
 
 ## Component Usage Patterns
 

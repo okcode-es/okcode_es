@@ -1,40 +1,117 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: OKCODE | Tutoriales de Desarrollo Práctico y Servicios Técnicos
+description: OKCODE | Blog técnico que registra el proceso de desarrollo, vida y proporciona servicios profesionales de desarrollo de sitios web y mini-programas, soluciones de comercio electrónico y construcción de aplicaciones móviles.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  title: 
+   	Registrar el Proceso de Desarrollo
+  tagline: 
+    ''
   image:
-    file: ../../../assets/portfolio.webp
+    alt: OKCODE Hero Image
+    file: ../../../assets/hero.svg
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: 📂 Mis Proyectos
+      link: '#-en-desarrollo'
+      variant: secondary
+    - text: 🆕 Artículos Más Recientes
+      link: '#-últimos-tutoriales'
+      variant: secondary
+    - text: 📍Guía de Vida en España
+      link: '#-guías-de-vida'
+      variant: secondary
+    - text: Más Tutoriales
+      link: /es/guides/example/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+      variant: primary
+    - text: Consultar Negocio de Desarrollo
+      link: /es/reference/services
       icon: external
-      variant: minimal
+      variant: secondary
+
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { ShowcaseText, ShowcaseImage } from 'starlight-showcases';
+import { Badge } from '@astrojs/starlight/components';
 
-## Next steps
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` en espanol.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+---
+
+## 🚀 En Desarrollo...
+<CardGrid>
+  <ShowcaseImage
+    entries={[
+      {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'flappy bird',
+      },
+        {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'working on it',
+      },
+    ]}
+  />
 </CardGrid>
+
+---
+## 🆕 Últimos Tutoriales
+<CardGrid stagger>
+  <LinkCard 
+    title="Técnicas Avanzadas de Personalización WordPress" 
+    description="Prácticas de desarrollo WordPress más recientes de 2025: campos personalizados, optimización de rendimiento y fortalecimiento de seguridad." 
+    href="/es/guides/wordpress-advanced/" 
+  />
+  <LinkCard 
+    title="Introducción al Desarrollo de APP Multi-plataforma Flutter" 
+    description="Construir aplicaciones móviles de alto rendimiento usando Flutter, desde lo básico hasta la publicación." 
+    href="/es/guides/flutter-intro/" 
+  />
+  <LinkCard 
+    title="Mejores Prácticas de Desarrollo de Temas Shopify" 
+    description="Dominar el lenguaje de plantillas Liquid de Shopify y crear temas de comercio electrónico personalizados." 
+    href="/es/guides/shopify-themes/" 
+  />
+</CardGrid>
+
+---
+
+## 🌍 Guías de Vida
+
+<CardGrid>
+  <LinkCard 
+    title="Guía de Vida en España" 
+    description="Profundamente arraigados en visa de España, inmigración, educación y sugerencias prácticas de vida local, proporcionando referencias valiosas para chinos en el extranjero." 
+    href="/es/spain/" 
+  />
+  <LinkCard 
+    title="Fotografía y Viajes" 
+    description="Registrar la luz y sombra del Mediterráneo, compartir guías de viaje y habilidades de fotografía de todo el mundo." 
+    href="/es/photography/" 
+  />
+</CardGrid>
+
+---
+
+## 📸 Portafolio Fotográfico
+
+<CardGrid>
+  <ShowcaseImage
+    entries={[
+      {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'flappy bird',
+      },
+        {
+        thumbnail: import('../../../../src/assets/portfolio.svg'),
+        href: '/',
+        title: 'working on it',
+      },
+    ]}
+  />
+</CardGrid>
+
+---
