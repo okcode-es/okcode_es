@@ -75,6 +75,7 @@ export default defineConfig({
               './src/styles/global.css',
           ],
           components: {
+            Header: './src/components/CustomHeader.astro',
             Hero: './src/components/CustomHero.astro',
             Footer: './src/components/CustomFooter.astro',
           },

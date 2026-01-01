@@ -1,9 +1,11 @@
 ---
 // src/components/CustomHero.astro
-import DefaultHero from '@astrojs/starlight/components/Hero.astro';
+import DefaultHero from "@astrojs/starlight/components/Hero.astro";
 ---
 
-<div class="relative w-full overflow-hidden  min-h-[60vh] flex items-center py-16">
+<div
+  class="relative w-full overflow-hidden min-h-[60vh] flex items-center py-16"
+>
   <div class="relative z-10 w-full">
     <DefaultHero {...Astro.props}>
       <slot />
