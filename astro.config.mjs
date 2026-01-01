@@ -7,7 +7,6 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://okcode.es',
-
   integrations: [
       starlight({
           head: [
@@ -44,8 +43,8 @@ export default defineConfig({
           ],
           defaultLocale: 'root',
           locales: {
-              root: { label: '简体中文', lang: 'zh-CN' },
-              en: { label: 'English', lang: 'en' },
+              root: { label: 'English', lang: 'en' },
+              'zh-cn': { label: '简体中文', lang: 'zh-CN' },
               es: { label: 'Español', lang: 'es' },
           },
           title: 'okcode',
@@ -56,17 +55,17 @@ export default defineConfig({
           ],
           sidebar: [
               {
-                  label: '教程',
+                  label: 'Tutorials',
 				  translations: {
-					'en': 'Guides',
-					'es': 'Manuales'
+					'zh-cn': '教程',
+					'es': 'Tutoriales'
 				},
                   autogenerate: { directory: 'guides' },
               },
               {
-                  label: '开发服务',
+                  label: 'Services',
 				    translations: {
-					'en': 'Development Services',
+					'zh-cn': '开发服务',
 					'es': 'Servicios de Desarrollo'
 				},
                   autogenerate: { directory: 'reference' },
